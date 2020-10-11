@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc.Server.Grpc.Contracts";
+
+message SensorRequest {
+	string name = 1;
+}
+
+
+message SensorResponse {
+	string name = 1;
+}
+
+service Sensor {
+	rpc GetSignal(SensorRequest) returns (SensorResponse);
+}
